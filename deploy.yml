@@ -1,0 +1,16 @@
+name: Mock Deploy Pipeline(Test)
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  mock-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run test
+        run: echo "Mock deployment test successful"
